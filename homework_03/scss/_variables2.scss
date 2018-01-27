@@ -1,0 +1,110 @@
+// style content
+$bodyBackground: #e0f6fd;
+$contentFont: 'Times New Roman', Sans-serif;
+$fontSize: 16px;
+$contentColor: #ffffff;
+$maxWidth: 1000px;
+$fixedCenter: 8px auto;
+$padding: 20px;
+$contantBackground: #3b3b3b;
+
+// heading style + p
+$colorHeading: #fccd10;
+$headingRegister: uppercase;
+$headingRegisterFalse: none;
+$lineHeight: 20px;
+
+//heading margin + p
+$h1topBottom: 5px 0 30px 0;
+$h2bottom: 0 0 25px 0;
+$pBottom: 0 0 20px;
+
+// img style
+$imgZIndex: 10;
+$imgBorder: 2px;
+$imgPadding: 2px;
+
+// img left
+$floatLeft: left;
+$marginLeft: 0 25px 10px 0;
+
+// img right
+$floatRight: right;
+$marginRight: 0 0 10px 25px;
+
+// block .brief
+$briefWidth: 100%;
+$briefPadding: 24px 20px;
+$briefMargin: 0 20px 35px 0;
+$briefFloat: none;
+$briefBackground: #fff178;
+$briefTextColor: #000000;
+
+// links
+$linksColor: #f5c70f;
+
+// table style
+$tableWidth: 95%;
+$tableCollapse: collapse; 
+$tableMargin: 60px;
+$tableBackground: #94a34e;
+$tableColor: $contentColor;
+
+// caption
+$textAlign: right;
+$captionColor: $briefTextColor;
+
+//tr
+$trHoverBg: $tableBackground;
+
+// th
+$tableThBorder: $tableColor;
+$tableRegister: uppercase;
+$thLeft: left;
+$thPadding: 10px 20px;
+$thBorder: 1px solid $tableThBorder;
+
+// td
+$tableTdBackground: #677d01;
+$tdBorder: 1px solid $tableBackground;
+$tdPadding: 10px 20px;
+$tdHoverBg: red;
+
+// form style
+$formColor: $linksColor;
+$fieldBorderColor: #94a34e;
+$fieldTextColor: #808080;
+$formWidth: 100%;
+$formSizing: border-box;
+$formRegister: $tableRegister;
+
+// div
+$displForm: flex;
+$justContent: space-between;
+
+// span
+$spanWidth: 490px;
+
+// input
+$inputWidth: 100%;
+$inputMargin: 9px 0 14px 0;
+$inputPadding: 5px;
+$inputBorder: 1px solid $fieldBorderColor;	
+
+// button
+$buttonColor: $linksColor;
+$buttonBackground: $contantBackground;
+$buttonSize: 20px;
+$cursorType: pointer;
+$border: 1px solid $buttonColor;
+$width: 240px;
+$buttonPadding: 12px 60px;	
+$buttonTextRegister: $headingRegister;
+
+// textarea
+$areaWidth: 100%;
+$areaMargin: 5px 0 20px 0;
+$areaPadding: 5px;
+$areaAlign: $thLeft;
+$areaColor: #808080;
+$areaBorder: 1px solid $fieldBorderColor; 
