@@ -162,7 +162,11 @@ a:focus{color:#666;outline:0}ul{padding:0;margin:0}body{background-color:#f2f2f2
 		color: #76d6e9;
 	}
 
-	section:nth-child(3) a[class]::after{
+	section:nth-child(3) a:visited{
+		color: #16343b;
+	}
+
+	section:nth-child(3) li:first-child::after,section:nth-child(3) li:nth-child(3)::after{
 		content: "New";
 		font-size: 10px;
 		position: relative;
