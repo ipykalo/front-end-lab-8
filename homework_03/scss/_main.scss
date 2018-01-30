@@ -1,20 +1,21 @@
 /* reset default */
-@import 'reset';
+@import "reset";
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
 
 // mixins
-@mixin ContentStyle($color,$margin,$textTransform){
+@mixin ContentStyle($color,$margin,$textTransform) {
 	color: $color;
 	margin: $margin;
 	text-transform: $textTransform;
 }
 
-@mixin imgStyle($border,$padding,$margin){
+@mixin imgStyle($border,$padding,$margin) {
 	border: $border solid $colorHeading;
 	padding: $padding;
 	margin: $margin;
 }
 
-@mixin brief($width,$padding,$margin,$float,$background,$color){
+@mixin brief($width,$padding,$margin,$float,$background,$color) {
 	width: $width;
 	padding: $padding;
 	margin: $margin;
@@ -23,42 +24,40 @@
 	color: $color;
 }
 
-@mixin links{
-		
-		&:link{
-			color: $linksColor;
-		}
-		
-		&:active{
-			color: darken($linksColor, 25%);
-		}
+@mixin links {
+	&:link {
+		color: $linksColor;
+	}
 
-		&:visited{
-			color: darken($linksColor,28%);
-		}
+	&:active {
+		color: darken($linksColor, 25%);
+	}
 
-		&:hover{
-			color: lighten($linksColor,30%);
-			text-decoration: none;
-		}
-	
+	&:visited {
+		color: darken($linksColor, 28%);
+	}
+
+	&:hover {
+		color: lighten($linksColor, 30%);
+		text-decoration: none;
+	}
 }
 
 // tr hover
-@mixin trHover{
-	&:hover{
-		td{
+@mixin trHover {
+	&:hover {
+		td {
 			background-color: $trHoverBg;
 		}
 	}
 }
 
-@mixin fieldHover{
- border-color: darken($fieldBorderColor, 30%);
- color: darken($formColor,100%);
+@mixin fieldHover {
+	border-color: darken($fieldBorderColor, 30%);
+	color: darken($formColor, 100%);
 }
 
-@mixin button{
+@mixin button {
 	cursor: $cursorType;
 	border: $border;
 	width: $width;
@@ -68,81 +67,80 @@
 	text-transform: $buttonTextRegister;
 	color: $buttonColor;
 
-	&:hover{
-		border-color: darken($buttonColor,25%);
-		color: darken($buttonColor,25%);
+	&:hover {
+		border-color: darken($buttonColor, 25%);
+		color: darken($buttonColor, 25%);
 	}
 }
 //mixins//
 
 /* style */
-body{
+body {
 	background-color: $bodyBackground;
 	font-family: $contentFont;
 	font-size: $fontSize;
 }
 
-#content{
+#content {
 	max-width: $maxWidth;
 	margin: $fixedCenter;
 	padding: $padding;
 	background-color: $contantBackground;
 }
 
-/* style heading + p */		
-h1{
+/* style heading + p */
+h1 {
 	text-align: center;
 	@include ContentStyle($colorHeading, $h1topBottom,$headingRegister);
 }
 
-h2{
+h2 {
 	@include ContentStyle($colorHeading, $h2bottom,$headingRegisterFalse);
 }
 
-p{
+p {
 	line-height: $lineHeight;
 	@include ContentStyle($contentColor, $pBottom,$headingRegisterFalse);
 }
 
 /* style img */
-img{
+img {
 	z-index: $imgZIndex;
-	&.img-left{
+	&.img-left {
 		float: $floatLeft;
 		@include imgStyle($imgBorder,$imgPadding,$marginLeft);
 	}
 
-	&.img-right{
+	&.img-right {
 		float: $floatRight;
 		@include imgStyle($imgBorder,$imgPadding,$marginRight);
 	}
 }
 
-.brief{
+.brief {
 	box-sizing: border-box;
 	@include brief($briefWidth,$briefPadding,$briefMargin, $briefFloat,$briefBackground,$briefTextColor);
 }
 
-
 /* style links */
-a{
+a {
 	@include links;
 }
 
 /* style table */
-table{
+table {
 	width: $tableWidth;
 	border-collapse: $tableCollapse;
 	margin-bottom: $tableMargin;
 	color: $tableColor;
 }
 
-caption{
+caption {
 	text-align: $textAlign;
 	color: $captionColor;
 }
 
-th{
+th {
 	background-color: $tableBackground;
 	text-transform: $tableRegister;
 	text-align: $thLeft;
@@ -150,55 +148,55 @@ th{
 	color: $briefTextColor;
 	border-right: $thBorder;
 
-	&:last-child{
+	&:last-child {
 		border-right: none;
 	}
 }
 
-td{
+td {
 	padding: $tdPadding;
 	border-bottom: $tdBorder;
 	background-color: $tableTdBackground;
 }
 
 // tr hover
-tr{
-	@include 	trHover;
+tr {
+	@include trHover;
 }
 
 /* style form */
-form{
+form {
 	width: $formWidth;
 	box-sizing: $formSizing;
 	text-transform: $formRegister;
 	color: $formColor;
 
-	div{
+	div {
 		display: $displForm;
 		justify-content: $justContent;
 	}
 
-	span{
+	span {
 		width: $spanWidth;
 	}
 
-	input{
-			width: $inputWidth;
-			margin: $inputMargin;
-			padding: $inputPadding;
-			border: $inputBorder;
-			color: $fieldTextColor;
+	input {
+		width: $inputWidth;
+		margin: $inputMargin;
+		padding: $inputPadding;
+		border: $inputBorder;
+		color: $fieldTextColor;
 
-			&:hover{
+		&:hover {
 			@include fieldHover;
 		}
 	}
 
-	input[type="submit"]{
+	input[type="submit"] {
 		@include button;
 	}
 
-	textarea{
+	textarea {
 		width: $areaWidth;
 		margin: $areaMargin;
 		padding: $areaPadding;
@@ -206,9 +204,8 @@ form{
 		color: $areaColor;
 		border: $areaBorder;
 
-		&:hover{
+		&:hover {
 			@include fieldHover;
 		}
 	}
-	
 }
