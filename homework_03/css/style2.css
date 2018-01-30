@@ -1,4 +1,5 @@
 /* reset default */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300");
 html, body, p, h1, h2, h3 {
   margin: 0;
   padding: 0; }
@@ -6,8 +7,8 @@ html, body, p, h1, h2, h3 {
 /* style */
 body {
   background-color: #e0f6fd;
-  font-family: "Times New Roman", Sans-serif;
-  font-size: 16px; }
+  font-family: "Roboto", sans-serif;
+  font-size: 15px; }
 
 #content {
   max-width: 1000px;
@@ -48,8 +49,7 @@ img {
     margin: 0 0 10px 25px; }
 
 .brief {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   padding: 24px 20px;
   margin: 0 20px 35px 0;
@@ -100,17 +100,12 @@ tr:hover td {
 /* style form */
 form {
   width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   text-transform: uppercase;
   color: #f5c70f; }
   form div {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+    justify-content: space-between; }
   form span {
     width: 490px; }
   form input {
@@ -144,3 +139,5 @@ form {
     form textarea:hover {
       border-color: #363c1c;
       color: black; }
+
+/*# sourceMappingURL=style2.css.map */

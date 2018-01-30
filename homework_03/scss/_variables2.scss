@@ -1,7 +1,7 @@
 // style content
 $bodyBackground: #e0f6fd;
-$contentFont: 'Times New Roman', Sans-serif;
-$fontSize: 16px;
+$contentFont: "Roboto", sans-serif;
+$fontSize: 15px;
 $contentColor: #ffffff;
 $maxWidth: 1000px;
 $fixedCenter: 8px auto;
@@ -45,7 +45,7 @@ $linksColor: #f5c70f;
 
 // table style
 $tableWidth: 95%;
-$tableCollapse: collapse; 
+$tableCollapse: collapse;
 $tableMargin: 60px;
 $tableBackground: #94a34e;
 $tableColor: $contentColor;
@@ -89,7 +89,7 @@ $spanWidth: 490px;
 $inputWidth: 100%;
 $inputMargin: 9px 0 14px 0;
 $inputPadding: 5px;
-$inputBorder: 1px solid $fieldBorderColor;	
+$inputBorder: 1px solid $fieldBorderColor;
 
 // button
 $buttonColor: $linksColor;
@@ -98,7 +98,7 @@ $buttonSize: 20px;
 $cursorType: pointer;
 $border: 1px solid $buttonColor;
 $width: 240px;
-$buttonPadding: 12px 60px;	
+$buttonPadding: 12px 60px;
 $buttonTextRegister: $headingRegister;
 
 // textarea
@@ -107,4 +107,4 @@ $areaMargin: 5px 0 20px 0;
 $areaPadding: 5px;
 $areaAlign: $thLeft;
 $areaColor: #808080;
-$areaBorder: 1px solid $fieldBorderColor; 
+$areaBorder: 1px solid $fieldBorderColor;
