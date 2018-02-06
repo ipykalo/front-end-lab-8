@@ -244,11 +244,13 @@ footer a:hover {
 	}
 	.head ul li {
 		width: 100%;
-		padding: 12px 0;
+		padding: 12px 7%;
+
 		font-size: 14px;
 		border-top: 1px solid #cccccc;
 		background-color: #eeeeee;
 	}
+
 	.head ul li a:hover {
 		color: #000000;
 	}
