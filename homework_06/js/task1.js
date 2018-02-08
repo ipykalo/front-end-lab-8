@@ -1,10 +1,9 @@
 var typeTriangle, a, b, c;
-a = +prompt("Enter length first side of triangle", "");
-b = +prompt("Enter length second side of triangle", "");
-c = +prompt("Enter length third side of triangle", "");
+a = Number(prompt("Enter length first side of triangle", ""));
+b = Number(prompt("Enter length second side of triangle", ""));
+c = Number(prompt("Enter length third side of triangle", ""));
 
 // type of Triangle
-
 if (
 	Math.pow(a, 2) == Math.pow(b, 2) + Math.pow(c, 2) ||
 	Math.pow(b, 2) == Math.pow(a, 2) + Math.pow(c, 2) ||
@@ -33,7 +32,7 @@ if (
 
 // square Triangles
 function squareTriangle(a, b, c) {
-	var p = (a * 10 + b * 10 + c * 10) / 10 / 2;
+	var p = (a * 1000 + b * 1000 + c * 1000) / 1000 / 2;
 	var result = Math.sqrt(p * (p - a) * (p - b) * (p - c));
 
 	if (isNaN(result) || result == 0) {

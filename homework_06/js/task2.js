@@ -1,8 +1,8 @@
 var courseEuro = 33.8565;
 var courseUsd = 27.4609;
 
-var amoutEuro = +prompt("Input amount of EURO", "");
-var amoutUsd = +prompt("Input amount of USD", "");
+var amoutEuro = Number(prompt("Input amount of EURO", ""));
+var amoutUsd = Number(prompt("Input amount of USD", ""));
 
 if (!isNaN(amoutEuro) && !isNaN(amoutUsd)) {
 	if (Math.sign(amoutEuro) == 1 && Math.sign(amoutUsd) == 1) {
