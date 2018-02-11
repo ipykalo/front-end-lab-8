@@ -21,7 +21,7 @@ while (playGame) {
 			Math.floor(arrNumThird)
 		];
 
-		var randNumber = 2; //Math.floor(Math.random() * (toNumber - 0 + 1) + 0);
+		var randNumber = Math.floor(Math.random() * (toNumber - 0 + 1) + 0);
 
 		posibllePrize = prize[lose];
 		var userNumber = prompt(
