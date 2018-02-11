@@ -1,4 +1,4 @@
-var chackInUserAnswer = false,
+var chackInUserAnswer,
 	lose = 0,
 	posibllePrize,
 	prize,
@@ -21,30 +21,40 @@ while (playGame) {
 			Math.floor(arrNumThird)
 		];
 
-		var randNumber = Math.floor(Math.random() * (toNumber - 0 + 1) + 0);
+		var randNumber = 2; //Math.floor(Math.random() * (toNumber - 0 + 1) + 0);
 
 		posibllePrize = prize[lose];
-		var userNumber = parseFloat(
-			prompt(
-				"Enter a number from 0 to " +
-					toNumber +
-					"\n" +
-					"Attempts left: " +
-					lose +
-					"\n" +
-					"Total prize: " +
-					totalPrize +
-					"$\n" +
-					"Possible price on current attempt: " +
-					posibllePrize +
-					"$",
-				""
-			)
+		var userNumber = prompt(
+			"Enter a number from 0 to " +
+				toNumber +
+				"\n" +
+				"Attempts left: " +
+				lose +
+				"\n" +
+				"Total prize: " +
+				totalPrize +
+				"$\n" +
+				"Possible price on current attempt: " +
+				posibllePrize +
+				"$",
+			""
 		);
 
 		chackInUserAnswer = isNaN(userNumber);
 
-		if (chackInUserAnswer) {
+		if (typeof userNumber == "object") {
+			console.log("you canceled entering answer!!!");
+			askUser = confirm("Do you want to play again?");
+			if (askUser) {
+				(toNumber = 5),
+					(arrNumFirst = 10),
+					(arrNumSecond = 5),
+					(arrNumThird = 2);
+				(totalPrize = 0), (lose = 0);
+			} else {
+				playGame = false;
+			}
+		} else if (chackInUserAnswer) {
 			console.log("Iincorrect data, enter only numbers!");
 			++lose;
 			totalPrize = 0;
@@ -83,7 +93,7 @@ while (playGame) {
 			} else if (toNumber > 5) {
 				toNumber /= 2;
 			}
-		} else if (userNumber !== randNumber && chackInUserAnswer == false) {
+		} else if (userNumber != randNumber) {
 			// If user do not guess a number
 			++lose;
 			totalPrize = 0;
