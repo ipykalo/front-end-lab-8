@@ -1,30 +1,24 @@
 var chackInUserAnswer,
 	lose = 0,
 	posibllePrize,
-	prize,
+	prize = 10,
 	totalPrize = 0,
 	playGame = true,
 	askUser,
 	toNumber = 5,
-	arrNumFirst = 10,
-	arrNumSecond = 5,
-	arrNumThird = 2;
+	userNumber,
+	randNumber,
+	answerUser;
 
-var answerUser = confirm("Do you want to play a game?");
+randNumber = Math.floor(Math.random() * (toNumber - 0 + 1) + 0);
+
+answerUser = confirm("Do you want to play a game?");
 
 while (playGame) {
 	if (answerUser) {
-		// random number and entering number of user
-		prize = [
-			Math.round(arrNumFirst),
-			Math.round(arrNumSecond),
-			Math.floor(arrNumThird)
-		];
+		posibllePrize = prize;
 
-		var randNumber = Math.floor(Math.random() * (toNumber - 0 + 1) + 0);
-
-		posibllePrize = prize[lose];
-		var userNumber = prompt(
+		userNumber = prompt(
 			"Enter a number from 0 to " +
 				toNumber +
 				"\n" +
@@ -42,100 +36,91 @@ while (playGame) {
 
 		chackInUserAnswer = isNaN(userNumber);
 
-		if (typeof userNumber == "object") {
-			console.log("you canceled entering answer!!!");
-			askUser = confirm("Do you want to play again?");
-			if (askUser) {
-				(toNumber = 5),
-					(arrNumFirst = 10),
-					(arrNumSecond = 5),
-					(arrNumThird = 2);
-				(totalPrize = 0), (lose = 0);
-			} else {
-				playGame = false;
-			}
-		} else if (chackInUserAnswer) {
+		if (chackInUserAnswer) {
 			console.log("Iincorrect data, enter only numbers!");
 			++lose;
-			totalPrize = 0;
+			prize = Math.floor((prize /= 2));
+			if (prize <= 2 || prize == 1) {
+				prize = 2;
+			}
+
 			if (lose == 3) {
+				totalPrize = 0;
 				console.log("Thank you for a game. Your prize is: " + totalPrize + "$");
 				askUser = confirm("Do you want to play again?");
 				if (askUser) {
-					(toNumber = 5),
-						(arrNumFirst = 10),
-						(arrNumSecond = 5),
-						(arrNumThird = 2);
-					(totalPrize = 0), (lose = 0);
+					(toNumber = 5), (prize = 10), (lose = 0), (totalPrize = 0);
 				} else {
 					playGame = false;
 				}
-			} else if (toNumber > 5) {
-				toNumber /= 2;
 			}
-		} else if (userNumber % 1 != 0) {
+		} else if (
+			userNumber % 1 != 0 ||
+			typeof userNumber == "object" ||
+			userNumber.trim() === ""
+		) {
 			// If user do not enter natural numbers guess
 			console.log("Enter only natural numbers!");
 			++lose;
-			totalPrize = 0;
+			prize = Math.floor((prize /= 2));
+			if (prize <= 2 || prize == 1) {
+				prize = 2;
+			}
+
 			if (lose == 3) {
+				totalPrize = 0;
 				console.log("Thank you for a game. Your prize is: " + totalPrize + "$");
 				askUser = confirm("Do you want to play again?");
 				if (askUser) {
-					(toNumber = 5),
-						(arrNumFirst = 10),
-						(arrNumSecond = 5),
-						(arrNumThird = 2);
-					(totalPrize = 0), (lose = 0);
+					(toNumber = 5), (prize = 10), (lose = 0), (totalPrize = 0);
 				} else {
 					playGame = false;
 				}
-			} else if (toNumber > 5) {
-				toNumber /= 2;
 			}
 		} else if (userNumber != randNumber) {
 			// If user do not guess a number
 			++lose;
-			totalPrize = 0;
+			prize = Math.floor((prize /= 2));
+
+			if (prize <= 2 || prize == 1) {
+				prize = 2;
+			}
+
 			if (lose == 3) {
+				totalPrize = 0;
 				console.log("Thank you for a game. Your prize is: " + totalPrize + "$");
 				askUser = confirm("Do you want to play again?");
 				if (askUser) {
-					(toNumber = 5),
-						(arrNumFirst = 10),
-						(arrNumSecond = 5),
-						(arrNumThird = 2);
-					(totalPrize = 0), (lose = 0);
+					(toNumber = 5), (prize = 10), (lose = 0), (totalPrize = 0);
 				} else {
 					playGame = false;
 				}
-			} else if (toNumber > 5) {
-				toNumber /= 2;
 			}
 		} else {
 			// If user guessed the number
+			randNumber = Math.floor(Math.random() * (toNumber - 0 + 1) + 0);
 
+			lose = 0;
 			userWin = confirm("Do you want to continue a game?");
 
 			if (userWin) {
-				totalPrize = totalPrize + prize[lose];
+				totalPrize = totalPrize + prize;
 				toNumber *= 2;
-				(arrNumFirst = arrNumFirst *= 3),
-					(arrNumSecond = arrNumSecond *= 3),
-					(arrNumThird = arrNumThird *= 3.5);
+
+				if (prize == 2) {
+					prize = Math.round(prize * 3.5);
+				} else {
+					prize = Math.round(prize * 3);
+				}
 			} else {
-				totalPrize = prize[lose];
+				totalPrize = prize;
 				if (totalPrize == undefined) {
 					totalPrize = Number(!!totalPrize);
 				}
 				console.log("Thank you for a game. Your prize is: " + totalPrize + "$");
 				askUser = confirm("Do you want to play again?");
 				if (askUser) {
-					(toNumber = 5),
-						(arrNumFirst = 10),
-						(arrNumSecond = 5),
-						(arrNumThird = 2);
-					(totalPrize = 0), (lose = 0);
+					(toNumber = 5), (prize = 10), (lose = 0), (totalPrize = 0);
 				} else {
 					playGame = false;
 				}
