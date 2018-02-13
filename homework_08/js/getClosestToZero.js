@@ -19,7 +19,11 @@ function getClosestToZero(...listNumber) {
 		} else if (biggerNumberArr2 < biggerNumberArr1) {
 			return biggerNumberArr2;
 		} else {
-			return biggerNumberArr2 + ", " + -biggerNumberArr1;
+			do {
+				let arr3 = [];
+				arr3.push(-biggerNumberArr1, biggerNumberArr2);
+				return arr3;
+			} while (biggerNumberArr2 < biggerNumberArr1);
 		}
 	};
 
