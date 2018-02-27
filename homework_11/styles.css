@@ -3,7 +3,11 @@ ul {
 	padding: 0px 0 0px 15px;
 	list-style: none;
 }
-p {
+p + li,
+p + i,
+p + ul,
+li + ul {
+	display: none;
 }
 span {
 	position: relative;
