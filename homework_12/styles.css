@@ -1,0 +1,67 @@
+body {
+	background-color: #1c1c1e;
+	color: #d6d1ba;
+	font-family: serif;
+}
+a {
+	width: 200px;
+	display: inline-block;
+	padding: 5px;
+	cursor: pointer;
+	transition: all 0.25s;
+	color: #a19e89;
+}
+a div {
+	display: flex;
+	justify-content: center;
+}
+div.thumbnails a:hover {
+	background-color: #2c2c2c;
+}
+
+div span.name {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+h2,
+.level {
+	color: #a19e89;
+}
+p {
+	font-size: 20px;
+	color: #a19e89;
+}
+
+img {
+	max-width: 100%;
+	background-image: url();
+}
+span {
+	margin-left: 10px;
+	text-transform: uppercase;
+}
+
+.count-table {
+	display: flex;
+	justify-content: space-between;
+}
+
+table,
+td {
+	border: 1px solid #a19e89;
+	border-collapse: collapse;
+	padding: 5px;
+}
+td:first-child {
+	width: 400px;
+}
+td:last-child {
+	width: 200px;
+}
+caption {
+	text-align: left;
+	padding-bottom: 10px;
+}
